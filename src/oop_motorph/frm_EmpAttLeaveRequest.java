@@ -269,7 +269,7 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
 
         cbox_attendanceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Work", "VL Request", "SL Request", "Overtime", "Unpaid Leave" }));
 
-        cbox_attendanceStat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Closed-On Time", "Closed-Late", "Pending" }));
+        cbox_attendanceStat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending" }));
         cbox_attendanceStat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbox_attendanceStatActionPerformed(evt);
@@ -602,18 +602,8 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
 
     private void btn_SubmitLeaveAttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitLeaveAttActionPerformed
 
-    if (empAttLeave != null) {
+        if (empAttLeave != null) {
         try {
-            // Convert selected dates to LocalDate
-            LocalDate dateFrom = dc_dateFrom.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            LocalDate dateTo = dc_dateTo.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-            // Validate that "Date From" is not greater than "Date To"
-            if (dateFrom.isAfter(dateTo)) {
-                JOptionPane.showMessageDialog(this, "Date From cannot be greater than Date To.", "Invalid Date Range", JOptionPane.ERROR_MESSAGE);
-                return;  
-            }
-
             // Retrieve old date values before editing
             String oldDateFrom = empAttLeave.getAttDateFrom() != null 
                 ? empAttLeave.getAttDateFrom().format(DateTimeFormatter.ofPattern("dd-MMM-yy")) 
@@ -621,54 +611,51 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
             String oldDateTo = empAttLeave.getAttDateTo() != null 
                 ? empAttLeave.getAttDateTo().format(DateTimeFormatter.ofPattern("dd-MMM-yy")) 
                 : "";
+            
+   
+            // Update details based on input fields
+            empAttLeave.setImmediateSupervisor(
+                cbox_immSupervisor.getSelectedItem() != null 
+                ? cbox_immSupervisor.getSelectedItem().toString().trim() 
+                : ""
+            );
+            
+            empAttLeave.setAttendanceType(
+                cbox_attendanceType.getSelectedItem() != null 
+                ? cbox_attendanceType.getSelectedItem().toString().trim() 
+                : ""
+            );
 
-            // Update attendance details
-            empAttLeave.setImmediateSupervisor(cbox_immSupervisor.getSelectedItem().toString().trim());
-            empAttLeave.setAttendanceType(cbox_attendanceType.getSelectedItem().toString().trim());
+            // Automatically set Attendance Status to "Pending"
             empAttLeave.setAttendanceStatus("Pending");
 
-            // Set date values
-            empAttLeave.setAttDateFrom(dateFrom);
-            empAttLeave.setAttDateTo(dateTo);
-
-            // Compute duration in days
-            long duration = ChronoUnit.DAYS.between(dateFrom, dateTo) + 1; 
-            txt_duration.setText(String.valueOf(duration));
-            empAttLeave.setDuration(duration);
-
-            // Parse time values
-            LocalTime timeIn = LocalTime.parse(txt_timeIn.getText().trim(), DateTimeFormatter.ofPattern("HH:mm"));
-            LocalTime timeOut = LocalTime.parse(txt_timeOut.getText().trim(), DateTimeFormatter.ofPattern("HH:mm"));
-            empAttLeave.setTimeIn(timeIn);
-            empAttLeave.setTimeOut(timeOut);
-
-            // Compute minutes worked
-            long minutesWorked = Duration.between(timeIn, timeOut).toMinutes();
-
-            // Compute hours worked based on attendance type
-            double hoursWorked;
-            String attendanceType = cbox_attendanceType.getSelectedItem().toString().trim();
-            
-            if (attendanceType.equalsIgnoreCase("Overtime") || attendanceType.equalsIgnoreCase("Unpaid Leave")) {
-                hoursWorked = (minutesWorked / 60.0) * duration;  // Direct computation without lunch deduction
-            } else {
-                hoursWorked = ((minutesWorked / 60.0) - 1) * duration;  // Deducting 1 hour for lunch break
+            // Handle Date Pickers
+            if (dc_dateFrom.getDate() != null) {
+                empAttLeave.setAttDateFrom(
+                    dc_dateFrom.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+                );
             }
 
-            // Round to 2 decimal places
-            hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
-
-            // Set computed hoursWorked
-            txt_hoursWorked.setText(String.valueOf(hoursWorked));
-            empAttLeave.setHoursWorked(hoursWorked);
-
-            // Validate Attendance Type selection
-            if (attendanceType.equalsIgnoreCase("Select")) {
-                JOptionPane.showMessageDialog(this, "Please select a valid Attendance Type.", "Invalid Selection", JOptionPane.WARNING_MESSAGE);
-                return;
+            if (dc_dateTo.getDate() != null) {
+                empAttLeave.setAttDateTo(
+                    dc_dateTo.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+                );
             }
 
-            // Save attendance edits
+            // Handle Time Inputs
+            if (!txt_timeIn.getText().isEmpty()) {
+                empAttLeave.setTimeIn(
+                    LocalTime.parse(txt_timeIn.getText().trim(), DateTimeFormatter.ofPattern("HH:mm"))
+                );
+            }
+
+            if (!txt_timeOut.getText().isEmpty()) {
+                empAttLeave.setTimeOut(
+                    LocalTime.parse(txt_timeOut.getText().trim(), DateTimeFormatter.ofPattern("HH:mm"))
+                );
+            }
+
+            // Save edits by passing old date values for row identification
             CSVHandler.saveEditAttendanceRequest(empAttLeave, oldDateFrom, oldDateTo);
 
             JOptionPane.showMessageDialog(this, "Attendance request submitted successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
@@ -677,8 +664,8 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error submitting attendance request: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
-    }
-
+    
+        }
     }//GEN-LAST:event_btn_SubmitLeaveAttActionPerformed
 
     private void btn_EditLeaveAttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditLeaveAttActionPerformed

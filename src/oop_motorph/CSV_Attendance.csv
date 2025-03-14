@@ -74,7 +74,7 @@ EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,T
 10025,Delia ,Aguilar,Probationary,Account Rank and File,De Leon Selena,09-May-22,09-May-22,8:00:00,17:00:00,8,1,Work,Approved,15,0,15,15,0,15
 10001,Jose,Crisostomo,Regular,HR Manager,N/A,09-Feb-22,09-Feb-22,8:00:00,17:00:00,8,1,Work,Approved,15,0,15,15,0,15
 10002,Christian,Mata,Regular,Account Team Leader,Romualdez Fredrick ,09-Feb-22,09-Feb-22,8:00:00,17:00:00,8,1,Work,Closed-On Time,15,0,15,15,0,15
-10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,01-Sep-22,02-Sep-22,16:00:00,17:00:00,2,2,Overtime,Approved,15,0,15,15,0,15
+10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,16-Sep-22,16-Sep-22,16:00:00,17:00:00,0.0,1.0,VL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0
 10004,Anthony,Salcedo,Regular,Payroll Manager,Alvaro Roderick,09-Jun-22,09-Jun-22,8:00:00,17:00:00,8,1,Work,Approved,15,0,15,15,0,15
 10005,Alice,Romualdez,Regular,HR Rank and File,San Jose Brad,09-Jun-22,09-Jun-22,8:00:00,17:00:00,8,1,Work,Rejected,15,0,15,15,0,15
 10006,Rosie ,Atienza,Regular,HR Rank and File,San Jose Brad,09-Jun-22,09-Jun-22,8:00:00,17:00:00,8,1,Work,Closed-On Time,15,0,15,15,0,15
@@ -4416,5 +4416,7 @@ EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,T
 10014,Mark,Bautista,Regular,Account Rank and File,Mata Christian,01-Jan-00,01-Jan-00,8:00:00,17:00:00,8.0,1.0,Unpaid Leave,Pending,15.0,0.0,15.0,15.0,0.0,15.0
 10015,Darlene,Lazaro,Probationary,Account Rank and File,Mata Christian,01-Jan-00,01-Jan-00,8:00:00,17:00:00,8.0,1.0,VL Request,Approved,15.0,0.0,15.0,15.0,0.0,15.0
 10009,Allison,San Jose,Regular,Account Rank and File,Mata Christian,01-Jan-24,02-Jan-24,8:00:00,17:00:00,16.0,2.0,VL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0
-10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,01-Sep-22,02-Sep-22,16:00:00,17:00:00,2.0,2.0,Overtime,Approved,15.0,0.0,15.0,15.0,0.0,15.0
+10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,03-Sep-22,04-Sep-22,16:00:00,17:00:00,2.0,2.0,Overtime,Pending,15.0,0.0,15.0,15.0,0.0,15.0
 10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,19-Jan-24,19-Jan-24,8:00:00,17:00:00,8.0,1.0,SL Request,Approved,15.0,0.0,15.0,15.0,0.0,15.0
+10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,30-Sep-22,30-Sep-22,17:00:00,17:00:00,2.0,2.0,SL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0
+10003,Brad,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,01-Mar-25,31-Mar-25,8:00:00,17:00:00,248.0,31.0,VL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0
