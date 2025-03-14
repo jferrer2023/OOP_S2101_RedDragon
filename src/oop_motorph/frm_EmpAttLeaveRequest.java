@@ -612,7 +612,16 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
                 ? empAttLeave.getAttDateTo().format(DateTimeFormatter.ofPattern("dd-MMM-yy")) 
                 : "";
             
-   
+      // Get dates
+            LocalDate dateFrom = dc_dateFrom.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            LocalDate dateTo = dc_dateTo.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+            // Validate date range
+            if (dateFrom.isAfter(dateTo)) {
+                JOptionPane.showMessageDialog(this, "'Date From' cannot be later than 'Date To'.", "Invalid Date Selection", JOptionPane.ERROR_MESSAGE);
+                return; // Stop execution
+            }
+            
             // Update details based on input fields
             empAttLeave.setImmediateSupervisor(
                 cbox_immSupervisor.getSelectedItem() != null 
