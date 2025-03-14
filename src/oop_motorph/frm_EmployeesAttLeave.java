@@ -25,7 +25,82 @@ public class frm_EmployeesAttLeave extends javax.swing.JFrame {
         tbl_Attendance.getTableHeader().setReorderingAllowed(false);
         
         //to disable tbl edit
-        tbl_Attendance.setDefaultEditor(Object.class, null);       
+        tbl_Attendance.setDefaultEditor(Object.class, null);  
+        
+       //JOYCE USER ACCESS PER ROLE        
+       // Retrieve current employee details
+        EmpDetails employee = EmpUserSession.getInstance().getCurrentUser();
+        
+        // Get role from CSVHandler
+        String role = CSVHandler.loadCredentials().get(employee.getEmpID())[1];
+        
+        // Set role-based access
+        setRoleBasedAccess(role);
+    }
+
+        public void setRoleBasedAccess(String role) {
+        // Default: Disable all buttons
+        btn_MyRecords.setEnabled(false);
+        btn_EmpRecords.setEnabled(false);
+        btn_Profile.setEnabled(false);
+        btn_Attendance.setEnabled(false);
+
+
+        // Enable buttons based on role (case-insensitive)
+        switch (role.toUpperCase()) {
+            case "EMPLOYEE":
+                // Employees cannot access payroll processing
+                break;
+            case "FINANCE":
+                // Finance can access:
+                btn_MyRecords.setEnabled(true);
+                btn_Profile.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
+                
+                break;
+            case "HR":
+                btn_Profile.setEnabled(true);
+                btn_ViewAttendance.setEnabled(false);
+                btn_PayrollProcessing.setEnabled(false);
+                btn_Attendance.setEnabled(true);
+                btn_MyRecords.setEnabled(true);
+                break;
+            case "DEPTHEAD":
+                // Dept-Head can access:
+                //no access
+                break;
+            case "FINANCE TL":
+                // Finance TL can access:
+                btn_MyRecords.setEnabled(true);
+                btn_Profile.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
+           
+                break;
+            case "PAYROLL MANAGER":
+                // Payroll Manager can access:
+                btn_MyRecords.setEnabled(true);
+                btn_Profile.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
+             
+                break;
+            case "ACCOUNTING":
+                // Accounting can access:
+                btn_MyRecords.setEnabled(true);
+                btn_Profile.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
+               
+                break;
+            case "ADMIN":
+                // Admin can access:
+                btn_EmpRecords.setEnabled(true);
+                btn_Profile.setEnabled(true);
+                btn_MyRecords.setEnabled(true);
+                btn_Attendance.setEnabled(true);
+                break;
+            default:
+                JOptionPane.showMessageDialog(this, "Invalid role: " + role, "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+        }
     }
 
     private void displayAttendanceData() {
