@@ -622,6 +622,62 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
                 return; // Stop execution
             }
             
+  
+            
+            // Fix for the Duration and Hours Worked Calculation
+            // Compute duration
+              
+            // Set default Time In and Time Out for SL/VL requests
+            String attendanceType = cbox_attendanceType.getSelectedItem().toString();
+            if (attendanceType.equals("SL Request") || attendanceType.equals("VL Request")) {
+                txt_timeIn.setText("08:00");
+                txt_timeOut.setText("17:00");
+            }
+            // Get and set time values
+            String timeInStr = txt_timeIn.getText().trim();
+            String timeOutStr = txt_timeOut.getText().trim();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+
+            if (!timeInStr.isEmpty() && !timeOutStr.isEmpty()) {
+                LocalTime timeIn = LocalTime.parse(timeInStr, formatter);
+                LocalTime timeOut = LocalTime.parse(timeOutStr, formatter);
+                empAttLeave.setTimeIn(timeIn);
+                empAttLeave.setTimeOut(timeOut);
+            } else {
+                System.err.println("Error: Time In/Out values are missing!");
+            }
+
+            // Compute duration
+            long duration = ChronoUnit.DAYS.between(dateFrom, dateTo) + 1;
+            txt_duration.setText(String.valueOf(duration));
+            empAttLeave.setDuration(duration);
+
+            // Compute hours worked
+            double hoursWorked = 0.0;
+            long minutesWorked = Duration.between(empAttLeave.getTimeIn(), empAttLeave.getTimeOut()).toMinutes();
+ 
+            // Special handling for Overtime & Unpaid Leave
+            if (attendanceType.equals("Overtime") /*|| attendanceType.equals("Unpaid Leave") */) {
+                hoursWorked = (minutesWorked / 60.0) * duration;
+            } else {
+                hoursWorked = ((minutesWorked / 60.0) - 1) * duration;
+            }
+ 
+            // Round to 2 decimal places
+            hoursWorked = Math.round(hoursWorked * 100.0) / 100.0;
+            txt_hoursWorked.setText(String.valueOf(hoursWorked));
+            empAttLeave.setHoursWorked(hoursWorked);
+            
+             // Validate Attendance Type selection
+            if (attendanceType.equalsIgnoreCase("Select")) {
+                JOptionPane.showMessageDialog(this, "Please select a valid Attendance Type.", "Invalid Selection", JOptionPane.WARNING_MESSAGE);
+                return;
+            }   // Fix for the Duration and Hours Worked Calculation
+            
+           
+            
+    
+            
             // Update details based on input fields
             empAttLeave.setImmediateSupervisor(
                 cbox_immSupervisor.getSelectedItem() != null 
