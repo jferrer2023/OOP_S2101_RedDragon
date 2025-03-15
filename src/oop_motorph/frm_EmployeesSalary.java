@@ -47,14 +47,13 @@ public class frm_EmployeesSalary extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
-                
+                btn_ViewPayInfo.setEnabled(false);               
                 break;
             case "HR":
                 btn_Profile.setEnabled(true);
                 btn_Attendance.setEnabled(true);
                 btn_PayrollProcessing.setEnabled(false);
-                btn_MyRecords.setEnabled(true);
-                
+                btn_MyRecords.setEnabled(true);              
                 break;
             case "DEPTHEAD":
                 // Dept-Head can access:
@@ -65,6 +64,8 @@ public class frm_EmployeesSalary extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_Attendance.setEnabled(true);
+                btn_ViewPayInfo.setEnabled(false);
            
                 break;
             case "PAYROLL MANAGER":
@@ -72,6 +73,7 @@ public class frm_EmployeesSalary extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_ViewPayInfo.setEnabled(false);
              
                 break;
             case "ACCOUNTING":
@@ -79,6 +81,7 @@ public class frm_EmployeesSalary extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_ViewPayInfo.setEnabled(false);
                
                 break;
             case "ADMIN":

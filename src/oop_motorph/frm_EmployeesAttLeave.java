@@ -74,6 +74,7 @@ public class frm_EmployeesAttLeave extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_ViewAttendance.setEnabled(false);
            
                 break;
             case "PAYROLL MANAGER":
@@ -81,6 +82,7 @@ public class frm_EmployeesAttLeave extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_ViewAttendance.setEnabled(false);
              
                 break;
             case "ACCOUNTING":
@@ -88,6 +90,7 @@ public class frm_EmployeesAttLeave extends javax.swing.JFrame {
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
+                btn_ViewAttendance.setEnabled(false);
                
                 break;
             case "ADMIN":

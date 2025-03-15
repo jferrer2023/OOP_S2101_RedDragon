@@ -153,12 +153,12 @@ public class frm_EmployeesPayrollPaid extends javax.swing.JFrame {
                 break;
             case "ADMIN":
                 // Admin can access:
-                //btn_AppPay.setEnabled(true);
-                //btn_undoApp.setEnabled(true);
-                //btn_werifyPay.setEnabled(true);
-                //btn_undoVerify.setEnabled(true);
-                //btn_printPayslip.setEnabled(true);
-                //btn_printPayReport.setEnabled(true);
+                btn_AppPay.setEnabled(true);
+                btn_undoApp.setEnabled(true);
+                btn_werifyPay.setEnabled(true);
+                btn_undoVerify.setEnabled(true);
+                btn_printPayslip.setEnabled(true);
+                btn_printPayReport.setEnabled(true);
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Invalid role: " + role, "Error", JOptionPane.ERROR_MESSAGE);

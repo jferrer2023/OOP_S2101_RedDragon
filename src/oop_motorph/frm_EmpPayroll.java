@@ -91,7 +91,8 @@ public class frm_EmpPayroll extends javax.swing.JFrame {
                 btn_SalaryAndStatutory.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_Logout.setEnabled(true);
-             // btn_MyRecords.setEnabled(true);
+                btn_MyRecords.setEnabled(true); 
+                btn_EmpRecords.setEnabled(true); 
                 break;
             case "HR":
                 // HR can access:
@@ -135,6 +136,7 @@ public class frm_EmpPayroll extends javax.swing.JFrame {
                 btn_Profile.setEnabled(true);
                 btn_Logout.setEnabled(true);
                 btn_MyRecords.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
                 break;
             case "ADMIN":
                 // Admin can access:

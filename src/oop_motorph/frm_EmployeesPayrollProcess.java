@@ -60,6 +60,7 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
                 btn_EmpRecords.setEnabled(true);
                 btn_computePay.setEnabled(true);
                 btn_ProcessPay.setEnabled(true);
+                btn_paySummary.setEnabled(true);
                 break;
             case "HR":
                 // HR can access:
@@ -80,12 +81,15 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
                 btn_editAdj.setEnabled(true);
                 btn_editPayDate.setEnabled(true);
                 break;
-            case "PAYROLL MANAGER":
+            case "PAYROLL MANAGER": 
                 // Payroll Manager can access:
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_EmpRecords.setEnabled(true);
                 btn_paySummary.setEnabled(true);
+                btn_editAdj.setEnabled(true);
+                btn_editPayDate.setEnabled(true);
+                btn_computePay.setEnabled(true);
                 break;
             case "ACCOUNTING":
                 // Accounting can access:
@@ -94,13 +98,21 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
                 btn_EmpRecords.setEnabled(true);
                 btn_paySummary.setEnabled(true);
                 btn_computePay.setEnabled(true);
+                btn_editAdj.setEnabled(true);
+                btn_editPayDate.setEnabled(true);
                 break;
-            case "ADMIN":
+            case "ADMIN": 
                 // Admin can access:
                 btn_EmpRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
                 btn_MyRecords.setEnabled(true);
                 btn_Attendance.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
+                btn_paySummary.setEnabled(true);
+                btn_editAdj.setEnabled(true);
+                btn_editPayDate.setEnabled(true);
+                btn_computePay.setEnabled(true);
+                btn_ProcessPay.setEnabled(true);
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Invalid role: " + role, "Error", JOptionPane.ERROR_MESSAGE);
@@ -1176,10 +1188,9 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
         totalEarnings, tardinessAbsences, eeTax, eeSSS, eePagibig, eePhilhealth, adjDeductions,
         totalDeductions, netPay, payStatus);
     
-    JOptionPane.showMessageDialog(null, "Payroll approved and saved successfully!");
+    JOptionPane.showMessageDialog(null, "Payroll approved and processed successfully!");
+
  
-        
-        
     }//GEN-LAST:event_btn_ProcessPayActionPerformed
 
     private void btn_editPayDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editPayDateActionPerformed

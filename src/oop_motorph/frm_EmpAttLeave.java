@@ -71,9 +71,10 @@ public class frm_EmpAttLeave extends javax.swing.JFrame {
             btn_Profile.setEnabled(true);
             btn_PayrollSummary.setEnabled(true);
             btn_Logout.setEnabled(true);
-
+            btn_LeaveApproval.setEnabled(false);
             btn_LeaveRequest.setEnabled(true);
-            btn_LeaveApproval.setEnabled(true);
+            btn_EmpRecords.setEnabled(true);
+          
             break;
         case "DEPTHEAD":
             // Dept-Head can access:
@@ -115,6 +116,7 @@ public class frm_EmpAttLeave extends javax.swing.JFrame {
             btn_LeaveMgt.setEnabled(true);
             btn_LeaveRequest.setEnabled(true);
             btn_LeaveApproval.setEnabled(true);
+            btn_EmpRecords.setEnabled(true);
             break;
         case "ADMIN":
             // Admin can access:

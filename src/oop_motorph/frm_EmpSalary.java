@@ -84,6 +84,7 @@ public class frm_EmpSalary extends javax.swing.JFrame {
                 btn_PayrollSummary.setEnabled(true);
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
+                btn_EmpRecords.setEnabled(true);
                 break;
             case "HR":
                 // HR can access:

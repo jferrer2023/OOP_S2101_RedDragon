@@ -48,12 +48,12 @@ public class frm_EmployeesRecords extends javax.swing.JFrame {
             case "FINANCE":
                 // Finance can access:
                 btn_Profile.setEnabled(true);
-                btn_AddEmp.setEnabled(true);
-                btn_DelEmp.setEnabled(true);
+                btn_AddEmp.setEnabled(false);
+                btn_DelEmp.setEnabled(false);
                 btn_Attendance.setEnabled(true);
                 btn_SalaryAndStatutory.setEnabled(true);
                 btn_PayrollProcessing.setEnabled(true);
-                btn_ViewEmp.setEnabled(true);
+                btn_ViewEmp.setEnabled(false);
                 break;
             case "HR":
                 // HR can access:
@@ -76,8 +76,9 @@ public class frm_EmployeesRecords extends javax.swing.JFrame {
                 // Finance TL can access:
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
-                btn_AddEmp.setEnabled(true);
-                btn_DelEmp.setEnabled(true);
+                btn_AddEmp.setEnabled(false);
+                btn_DelEmp.setEnabled(false);
+                btn_ViewEmp.setEnabled(false);
                 btn_Attendance.setEnabled(true);
                 btn_SalaryAndStatutory.setEnabled(true);
                 btn_PayrollProcessing.setEnabled(true);
@@ -86,20 +87,23 @@ public class frm_EmployeesRecords extends javax.swing.JFrame {
                 // Payroll Manager can access:
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
-                btn_AddEmp.setEnabled(true);
-                btn_DelEmp.setEnabled(true);
+                btn_AddEmp.setEnabled(false);
+                btn_DelEmp.setEnabled(false);
                 btn_Attendance.setEnabled(true);
                 btn_SalaryAndStatutory.setEnabled(true);
                 btn_PayrollProcessing.setEnabled(true);
+                btn_ViewEmp.setEnabled(false);
                 break;
             case "ACCOUNTING":
                 // Accounting can access:
                 btn_MyRecords.setEnabled(true);
                 btn_Profile.setEnabled(true);
-                btn_AddEmp.setEnabled(true);
-                btn_DelEmp.setEnabled(true);
+             // btn_AddEmp.setEnabled(true);
+             // btn_DelEmp.setEnabled(true);
                 btn_Attendance.setEnabled(true);
                 btn_SalaryAndStatutory.setEnabled(true);
+                btn_PayrollProcessing.setEnabled(true);
+                btn_ViewEmp.setEnabled(false);
                 break;
             case "ADMIN":
                 // Admin can access:
@@ -109,6 +113,7 @@ public class frm_EmployeesRecords extends javax.swing.JFrame {
                 btn_AddEmp.setEnabled(true);
                 btn_DelEmp.setEnabled(true);
                 btn_SalaryAndStatutory.setEnabled(true);
+                btn_PayrollProcessing.setEnabled(true);
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Invalid role: " + role, "Error", JOptionPane.ERROR_MESSAGE);
