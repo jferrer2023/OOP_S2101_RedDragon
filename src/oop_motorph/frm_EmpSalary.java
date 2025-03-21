@@ -69,7 +69,7 @@ public class frm_EmpSalary extends javax.swing.JFrame {
         btn_PayrollSummary.setEnabled(false);
         btn_Profile.setEnabled(false);
         btn_MyRecords.setEnabled(false);
-        btn_SalaryAndStatutory.setEnabled(false);
+       // btn_SalaryAndStatutory.setEnabled(false);
 
         // Enable buttons based on role (case-insensitive)
         switch (role.toUpperCase()) {

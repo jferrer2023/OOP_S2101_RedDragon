@@ -32,7 +32,7 @@ public class frm_EmpAttLeave extends javax.swing.JFrame {
     public void setRoleBasedAccess(String role) {
     // Default: Disable all buttons
     btn_MyRecords.setEnabled(true);
-    btn_LeaveMgt.setEnabled(false);
+    //btn_LeaveMgt.setEnabled(false);
     btn_SalaryAndStatutory.setEnabled(false);
     btn_Profile.setEnabled(true);
     btn_Logout.setEnabled(false);

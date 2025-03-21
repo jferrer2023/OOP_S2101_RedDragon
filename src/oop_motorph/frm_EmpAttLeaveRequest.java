@@ -283,6 +283,7 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
         jLabel14.setText("Status:");
 
         cbox_immSupervisor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "N/A", "Romualdez Fredrick", "Villanueva Andrea Mae", "Alvaro Roderick", "San Jose Brad", "Salcedo Anthony", "Mata Christian", "Lim Antonio", "De Leon Selena" }));
+        cbox_immSupervisor.setEnabled(false);
 
         txt_vlCount.setEditable(false);
         txt_vlCount.setBackground(new java.awt.Color(255, 255, 204));
@@ -735,7 +736,9 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
 
     private void btn_EditLeaveAttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditLeaveAttActionPerformed
         
+        cbox_immSupervisor.setEnabled(false);
         setFieldsEditable(true); // Enable editing
+        
 
     }//GEN-LAST:event_btn_EditLeaveAttActionPerformed
 

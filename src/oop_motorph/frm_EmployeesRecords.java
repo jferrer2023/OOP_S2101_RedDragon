@@ -31,7 +31,7 @@ public class frm_EmployeesRecords extends javax.swing.JFrame {
         public void setRoleBasedAccess(String role) {
         // Default: Disable all buttons
         btn_MyRecords.setEnabled(false);
-        btn_EmpRecords.setEnabled(false);
+        //btn_EmpRecords.setEnabled(false);
         btn_Profile.setEnabled(false);
         btn_Attendance.setEnabled(false);
         btn_AddEmp.setEnabled(false);

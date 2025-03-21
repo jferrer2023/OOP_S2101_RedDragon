@@ -1,4 +1,4 @@
-EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,TimeOut,HoursWorked,Duration,AttendanceType,AttendanceStat,VLCount,VLUsed,VLBal,SLCount,SLUsed,SLBal,,,,
+EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,TimeOut,HoursWorked,Duration,AttendanceType,AttendanceStat,VLCount,VLUsed,VLBal,SLCount,SLUsed,SLBal
 10003,Brad Ii,San Jose,Regular,HR Team Leader,Villanueva Andrea Mae,13-Mar-26,09-Mar-27,8:00:00,17:00:00,8,1,Work,Approved,15,0,15,15,0,15,,,,
 10004,Anthony,Salcedo,Regular,Payroll Manager,Alvaro Roderick,09-Jan-22,09-Jan-22,8:00:00,17:00:00,8,1,Work,Approved,15,0,15,15,0,15,,,,
 10005,Alicesss,Romualdez,Regular,HR Rank and File,San Jose Brad,09-Jan-22,10-Jan-22,8:00:00,17:00:00,16,2,Work,Rejected,15,0,15,15,0,15,,,,
@@ -4572,4 +4572,4 @@ EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,T
 10031,Andrea Mae,Villanueva,Regular,HR Manager,Lim Antonio,05-Mar-24,05-Mar-24,8:00:00,17:00:00,8,1,SL Request,Pending,15,0,15,15,0,15,,,,
 10011,Josie,Lopez,Regular,Payroll Team Leader,Salcedo Anthony,21-Aug-25,22-Aug-25,8:00:00,17:00:00,16,2,SL Request,Pending,15,0,15,15,0,15,,,,
 10004,Anthony,Salcedo,Regular,Payroll Manager,Alvaro Roderick,23-Sep-25,23-Sep-25,8:00:00,17:00:00,8,1,VL Request,Pending,15,0,15,15,0,15,,,,
-10009,Allison,San Jose,Regular,Account Rank and File,Mata Christian,18-Nov-25,20-Nov-25,8:00:00,17:00:00,24,3,SL Request,Pending,15,0,15,15,0,15,,,,
+10009,Allison,San Jose,Regular,Account Rank and File,Mata Christian,18-Nov-25,20-Nov-25,8:00:00,17:00:00,24.0,3.0,SL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0,,,,

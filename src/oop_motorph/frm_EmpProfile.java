@@ -46,14 +46,14 @@ public class frm_EmpProfile extends javax.swing.JFrame {
         cbox_position.setSelectedItem(employee.getPosition());
         cmb_Supervisor.setSelectedItem(employee.getImmediateSupervisor());
     }
-
+ 
     // Set role-based access controls
     private void setRoleBasedAccess(String role) {
     // Disable all buttons and fields by default
-    btn_MyRecords.setEnabled(false);
+    //btn_MyRecords.setEnabled(false);
     btn_LeaveMgt.setEnabled(false);
     btn_SalaryAndStatutory.setEnabled(false);
-    btn_Profile.setEnabled(false);
+    //btn_Profile.setEnabled(false);
     btn_Logout.setEnabled(false);
     btn_EmpRecords.setEnabled(false);
     btn_PayrollSummary.setEnabled(false);
