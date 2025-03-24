@@ -396,7 +396,7 @@ public class frm_EmployeesRecords2 extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "First name and last name cannot contain commas.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
         return;
     }
-    
+     
     
 // String birthdate = txt_birthdate.getText().trim();
     String birthdate = txt_birthdate.getText().trim();
