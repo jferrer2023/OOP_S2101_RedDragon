@@ -390,8 +390,15 @@ public class frm_EmployeesRecords2 extends javax.swing.JFrame {
     String empID = txt_empID.getText().trim();
     String firstName = CSVHandler.capitalizeWords(txt_firstName.getText().trim(), 50);
     String lastName = CSVHandler.capitalizeWords(txt_lastName.getText().trim(), 50);
-   // String birthdate = txt_birthdate.getText().trim();
+   
+    // Check if first name or last name contains a comma
+    if (firstName.contains(",") || lastName.contains(",")) {
+        JOptionPane.showMessageDialog(this, "First name and last name cannot contain commas.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
     
+    
+// String birthdate = txt_birthdate.getText().trim();
     String birthdate = txt_birthdate.getText().trim();
     birthdate = CSVHandler.formatBirthdate(birthdate);
 

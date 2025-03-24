@@ -2,8 +2,8 @@ EmpID,First Name,Last Name,Birthday,Address,Phone Number,Status,Position,Immedia
 10002,Christian,Mata,21-Oct-87,90 O'Keefe Spur Apt. 379 Catigbian 2772 Sulu ,783-776-744,Regular,Account Team Leader,Romualdez Fredrick 
 10003,Brad Ii,San Jose,15-Mar-96,99 Strosin Hills Poblacion Bislig 5340 Tawi-tawi,797-009-261,Regular,HR Team Leader,Villanueva Andrea Mae
 10004,Anthony,Salcedo,14-Sep-93,93/54 Shanahan Alley Apt. 183 Santo Tomas 1572 Masbate,070-766-300,Regular,Payroll Manager,Alvaro Roderick
-10005,Alicesss,Romualdez,14-May-92,12A/33 Upton Isle Apt. 420 Roxas City 1814 Surigao del Norte,983-606-799,Regular,HR Rank and File,San Jose Brad
-10006,Rosie ,Atienza,24-Sep-48,90A Dibbert Terrace Apt. 190 San Lorenzo 6056 Davao del Norte,266-036-427,Regular,HR Rank and File,San Jose Brad
+10005,Alicesss,Romualdez,14-May-92,12A/33 Upton Isle Apt. 420 Roxas City 1814 Surigao del Norte,983-606-799,Regular,HR Rank and File,Villanueva Andrea Mae
+10006,Rosie ,Atienza,24-Sep-48,90A Dibbert Terrace Apt. 190 San Lorenzo 6056 Davao del Norte,266-036-427,Regular,HR Rank and File,Villanueva Andrea Mae
 10007,Martha,Farala,11-Jan-42,42/25 Sawayn Stream Ubay 1208 Zamboanga del Norte ,329-034-366,Regular,Payroll Rank and File,Salcedo Anthony
 10008,Leila,Martinez,11-Jul-70,37/46 Kulas Roads Maragondon 0962 Quirino ,877-110-749,Regular,Payroll Rank and File,Salcedo Anthony
 10009,Allison ,San Jose,24-Jun-86,08 Grant Drive Suite 406 Poblacion Iloilo City 9186 La Union,179-075-129,Regular,Account Rank and File,Mata Christian
@@ -34,3 +34,5 @@ EmpID,First Name,Last Name,Birthday,Address,Phone Number,Status,Position,Immedia
 10034,Carlos Ian,Martinez,16-Nov-90,Bulala Camalaniugan,078-854-208,Regular,Supply Chain and Logistics,Reyes Isabella
 10035,Beatriz,Santos,07-Aug-90,Agapita Building Metro Manila,526-639-511,Regular,Customer Service and Relations,Reyes Isabella
 10040,Joyce Test,Ferrer,23-Oct-89,Test Bacoor Cavite,100,Regular,Account Team Leader,Mata Christian
+10055,Test Joyce,"Test,",10-May-20,"Test,",09177777777,Regular,Account Team Leader,Romualdez Fredrick
+10055,Test,Test,10-May-22,Test,09177777777,Probation,Account Team Leader,Villanueva Andrea Mae
