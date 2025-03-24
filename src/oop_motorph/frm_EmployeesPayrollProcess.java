@@ -1023,7 +1023,7 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
         // Compute total hours worked only within the selected pay period
         for (EmpAttLeave att : attendanceList) {
             if (att.getEmpID().equals(empDetails.getEmpID()) &&
-                (att.getAttendanceType().equals("Work") || att.getAttendanceType().equals("VL Request") || att.getAttendanceType().equals("SL Request")) &&
+                (att.getAttendanceType().equals("Work") || att.getAttendanceType().equals("Overtime")|| att.getAttendanceType().equals("VL Request") || att.getAttendanceType().equals("SL Request")) &&
                 (att.getAttendanceStatus().equals("Closed") || att.getAttendanceStatus().equals("Closed-Late") || 
                  att.getAttendanceStatus().equals("Closed-On Time") || att.getAttendanceStatus().equals("Approved"))) {
                 

@@ -4580,3 +4580,4 @@ EmpID,First Name,Last Name,Status,Position,ImmediateSup,DateFrom,DateTo,TimeIn,T
 10005,Alice,Romualdez,Regular,HR Rank and File,San Jose Brad,10-Jan-25,10-Jan-25,8:00:00,17:00:00,8.0,1.0,SL Request,Pending,15.0,0.0,15.0,15.0,0.0,15.0
 10055,Test Joyce,"Test,",Regular,Account Team Leader,Romualdez Fredrick,01-Jan-00,01-Jan-00,,,,,,,0,0,,,0,0,0,0,0,0
 10055,Test,Test,Probation,Account Team Leader,Villanueva Andrea Mae,01-Jan-00,01-Jan-00,,,,,,,0,0,,,0,0,0,0,0,0
+10035,Beatriz,Santos,Regular,Customer Service and Relations,Reyes Isabella,27-Mar-25,28-Mar-25,8:00:00,17:00:00,18.0,2.0,Overtime,Pending,15.0,0.0,15.0,15.0,0.0,15.0
