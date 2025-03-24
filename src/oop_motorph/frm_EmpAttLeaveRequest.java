@@ -603,7 +603,7 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
 
     private void btn_SubmitLeaveAttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitLeaveAttActionPerformed
 
-        if (empAttLeave != null) {
+       if (empAttLeave != null) {
         try {
             // Retrieve old date values before editing
             String oldDateFrom = empAttLeave.getAttDateFrom() != null 
@@ -730,8 +730,7 @@ public class frm_EmpAttLeaveRequest extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error submitting attendance request: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
-    
-        }
+       }
     }//GEN-LAST:event_btn_SubmitLeaveAttActionPerformed
 
     private void btn_EditLeaveAttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditLeaveAttActionPerformed
