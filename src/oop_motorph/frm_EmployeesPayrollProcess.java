@@ -1077,7 +1077,7 @@ public class frm_EmployeesPayrollProcess extends javax.swing.JFrame {
         
         
         // Calculate earnings
-        double earnings = (((basicSalary / 167.99) * totalHoursWorked)+ empDetails.calculateTotalAllowance() + adjEarnings);
+        double earnings = (((basicSalary / 168.00) * totalHoursWorked)+ empDetails.calculateTotalAllowance() + adjEarnings);
         txt_earnings.setText(String.format("%.2f", earnings));
         
         double monthlyGross = earnings;
