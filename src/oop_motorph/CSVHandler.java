@@ -1,5 +1,5 @@
 package oop_motorph;
-
+  
 import java.awt.print.PageFormat;
 import java.awt.print.Paper;
 import java.awt.print.PrinterException;
