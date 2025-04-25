@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
- 
+  
 public class frm_EmpAddAttLeave extends javax.swing.JFrame {
     private EmpAttLeave empAttLeave;
     private boolean isEditMode;
